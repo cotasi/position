@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유지보수가 가능한 네비 구현하기</title>
+</head>
+<body>
+    <ul id="navi"></ul>
+    <script>
+        const mutisubject = [
+                ["네이버", "http://naver.com"],
+                ["다음", "http://daum.net"],
+                ["유튜브", "http://www.youtube.com"]
+            ]
+
+        let litag = "";
+        for(x in mutisubject) {
+            litag +=`<li><a href="${mutisubject[x][1]}">${mutisubject[x][0]}</a></li>`;
+        }
+        document.getElementById("navi").innerHTML = litag;
+
+    </script>
+</body>
+</html>
